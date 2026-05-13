@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Escola que Protege",
+    "slug": "escola-protege",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1A3A6B"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1A3A6B"
+      },
+      "package": "com.escolaprotege.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.escolaprotege.app"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "da3bf2cc-71df-40da-b3a5-1bec553953b9"
+      }
+    }
+  }
+}

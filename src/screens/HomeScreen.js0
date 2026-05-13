@@ -1,0 +1,190 @@
+// src/screens/HomeScreen.js
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
+
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { Ionicons } from '@expo/vector-icons';
+import { colors, spacing, radius } from '../theme';
+
+const cards = [
+  {
+    id: 'denuncia',
+    icon: 'alert-circle',
+    title: 'Fazer Denúncia',
+    subtitle: 'Anônima e segura',
+    color: colors.danger,
+    bg: '#FDF2F2',
+    screen: 'Denuncia',
+  },
+  {
+    id: 'ajuda',
+    icon: 'call',
+    title: 'Central de Ajuda',
+    subtitle: 'Disque 100 e mais',
+    color: colors.primary,
+    bg: '#EBF1FF',
+    screen: 'Ajuda',
+  },
+  {
+    id: 'educacao',
+    icon: 'book-open',
+    title: 'Se Informe',
+    subtitle: 'Conteúdo educativo',
+    color: colors.secondary,
+    bg: '#EAFAF1',
+    screen: 'Educacao',
+  },
+  {
+    id: 'como_agir',
+    icon: 'shield-checkmark',
+    title: 'Como Agir',
+    subtitle: 'Protocolos e orientações',
+    color: colors.accent,
+    bg: '#FEF9E7',
+    screen: 'ComoAgir',
+  },
+];
+
+export default function HomeScreen({ navigation }) {
+  return (
+    <SafeAreaView style={styles.safe}>
+      <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {/* Header */}
+        <View style={styles.header}>
+          <View style={styles.headerTop}>
+            <View style={styles.logoBox}>
+              <Ionicons name="shield" size={28} color="#fff" />
+            </View>
+            <View style={{ flex: 1, marginLeft: spacing.sm }}>
+              <Text style={styles.headerTitle}>Escola que Protege</Text>
+              <Text style={styles.headerSub}>Tecnologia contra a violência</Text>
+            </View>
+          </View>
+
+          <View style={styles.alertBanner}>
+            <Ionicons name="warning" size={18} color={colors.danger} />
+            <Text style={styles.alertText}>
+              Em perigo imediato? Ligue{' '}
+              <Text style={styles.alertBold}>190</Text> ou{' '}
+              <Text style={styles.alertBold}>100</Text>
+            </Text>
+          </View>
+        </View>
+
+        {/* Cards principais */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>O que você precisa?</Text>
+          <View style={styles.grid}>
+            {cards.map((card) => (
+              <TouchableOpacity
+                key={card.id}
+                style={[styles.card, { backgroundColor: card.bg }]}
+                onPress={() => navigation.navigate(card.screen)}
+                activeOpacity={0.85}
+              >
+                <View style={[styles.cardIcon, { backgroundColor: card.color }]}>
+                  <Ionicons name={card.icon} size={24} color="#fff" />
+                </View>
+                <Text style={[styles.cardTitle, { color: card.color }]}>{card.title}</Text>
+                <Text style={styles.cardSub}>{card.subtitle}</Text>
+                <Ionicons
+                  name="chevron-forward"
+                  size={16}
+                  color={card.color}
+                  style={{ alignSelf: 'flex-end', marginTop: spacing.sm }}
+                />
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+
+        {/* Info rápida */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Saiba que você não está sozinha</Text>
+          <View style={styles.infoCard}>
+            <Text style={styles.infoText}>
+              Este aplicativo foi desenvolvido para que meninas e jovens possam denunciar
+              situações de violência de forma <Text style={styles.bold}>anônima e segura</Text>,
+              acessar informações e encontrar apoio.
+            </Text>
+            <View style={styles.divider} />
+            <Text style={styles.infoSmall}>
+              📊 Segundo o 4º Boletim Escola que Protege (MEC/2025), foram registradas mais de
+              15.700 notificações de violência em escolas em 2024.
+            </Text>
+          </View>
+        </View>
+
+        <View style={{ height: spacing.xl }} />
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: colors.primary },
+  header: {
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.lg,
+  },
+  headerTop: { flexDirection: 'row', alignItems: 'center', marginBottom: spacing.md },
+  logoBox: {
+    width: 50, height: 50, borderRadius: 14,
+    backgroundColor: 'rgba(255,255,255,0.15)',
+    justifyContent: 'center', alignItems: 'center',
+  },
+  headerTitle: { fontSize: 20, fontWeight: '700', color: '#fff' },
+  headerSub: { fontSize: 13, color: 'rgba(255,255,255,0.75)', marginTop: 2 },
+  alertBanner: {
+    flexDirection: 'row', alignItems: 'center',
+    backgroundColor: '#fff', borderRadius: radius.md,
+    paddingHorizontal: spacing.md, paddingVertical: spacing.sm,
+    gap: spacing.sm,
+  },
+  alertText: { fontSize: 14, color: colors.text, flex: 1 },
+  alertBold: { fontWeight: '700', color: colors.danger },
+  section: {
+    backgroundColor: colors.background,
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.lg,
+  },
+  sectionTitle: {
+    fontSize: 17, fontWeight: '700', color: colors.text,
+    marginBottom: spacing.md,
+  },
+  grid: {
+    flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm,
+  },
+  card: {
+    width: '48%', borderRadius: radius.lg,
+    padding: spacing.md, marginBottom: spacing.xs,
+    borderWidth: 1, borderColor: 'rgba(0,0,0,0.06)',
+  },
+  cardIcon: {
+    width: 44, height: 44, borderRadius: radius.md,
+    justifyContent: 'center', alignItems: 'center',
+    marginBottom: spacing.sm,
+  },
+  cardTitle: { fontSize: 15, fontWeight: '700', marginBottom: 3 },
+  cardSub: { fontSize: 12, color: colors.textSecondary },
+  infoCard: {
+    backgroundColor: '#fff', borderRadius: radius.lg,
+    padding: spacing.md,
+    borderWidth: 1, borderColor: colors.border,
+  },
+  infoText: { fontSize: 14, color: colors.text, lineHeight: 21 },
+  bold: { fontWeight: '700' },
+  divider: { height: 1, backgroundColor: colors.border, marginVertical: spacing.md },
+  infoSmall: { fontSize: 12, color: colors.textSecondary, lineHeight: 18 },
+});
