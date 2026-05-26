@@ -1,4 +1,5 @@
-Escola que Protege — App Mobile
+Markdown
+# 📱 Escola que Protege — App Mobile
 
 Projeto de Atividade Extensionista (UNINTER) para o curso de Análise e Desenvolvimento de Sistemas.  
 **Título:** Dando um debug na desigualdade de gênero em ambiente escolar  
@@ -40,19 +41,21 @@ npm install
 
 # Inicie o Expo
 npx expo start
+Agora basta abrir o aplicativo Expo Go no celular e escanear o QR Code gerado no terminal.
 
+Build para Android (APK)
+Para gerar o arquivo de instalação final, você pode optar pelo build local ou via EAS.
 
-
+Via EAS Build (Recomendado)
+Bash
 npm install -g eas-cli
 eas login
 eas build:configure
 eas build --platform android --profile preview
-
+Via Android Studio (Local)
 Bash
 npx expo run:android
-
-
-
+Estrutura de Arquivos
 escola-protege/
 ├── App.js                    # Configuração de rotas e navegação
 ├── app.json                  # Manifesto do Expo
