@@ -1,39 +1,38 @@
-Markdown
-# 📱 Escola que Protege — App Mobile
+Projeto de Atividade Extensionista (UNINTER) para o curso de Análise e Desenvolvimento de Sistemas.
 
-Projeto de Atividade Extensionista (UNINTER) para o curso de Análise e Desenvolvimento de Sistemas.  
-**Título:** Dando um debug na desigualdade de gênero em ambiente escolar  
-**Aluno:** Gedivan Santana de Jesus | **RU:** 4552028
+Título: Dando um debug na desigualdade de gênero em ambiente escolar
 
----
+Aluno: Gedivan Santana de Jesus | RU: 4552028
 
-## Sobre o Projeto
+Sobre o Projeto
+Aplicativo mobile desenvolvido em React Native (Expo) para auxiliar no combate à violência de gênero no ambiente escolar. O foco do app é permitir que alunas relatem situações de violência de forma anônima, além de centralizar canais de denúncia e conteúdos informativos.
 
-Aplicativo mobile desenvolvido em **React Native (Expo)** para auxiliar no combate à violência de gênero no ambiente escolar. O foco do app é permitir que alunas relatem situações de violência de forma anônima, além de centralizar canais de denúncia e conteúdos informativos.
+Funcionalidades principais
+Denúncia Anônima: Formulário categorizado sem coleta de dados do usuário.
 
-### Funcionalidades principais
-* **Denúncia Anônima:** Formulário categorizado sem coleta de dados do usuário.
-* **Central de Emergência:** Acesso rápido para discagem direta (180, 100, 190, etc).
-* **Conteúdo Educativo:** Textos informativos sobre consentimento, cyberbullying e saúde mental.
-* **Protocolos de Ação:** Guia passo a passo sobre como agir em situações de risco.
+Central de Emergência: Acesso rápido para discagem direta (180, 100, 190, etc).
 
-### Embasamento técnico e legal
-* 1º e 4º Boletim Técnico Escola que Protege (MEC/MDHC/FBSP)
-* Lei nº 14.811/2024 (Criminalização do bullying e cyberbullying)
-* Decreto nº 12.006/2024 (Programa Escola que Protege)
+Conteúdo Educativo: Textos informativos sobre consentimento, cyberbullying e saúde mental.
 
----
+Protocolos de Ação: Guia passo a passo sobre como agir em situações de risco.
 
-## Como Rodar o Projeto
+Embasamento técnico e legal
+1º e 4º Boletim Técnico Escola que Protege (MEC/MDHC/FBSP)
 
-### Pré-requisitos
-* Node.js (v18 ou superior)
-* Expo Go instalado no smartphone (Android)
+Lei nº 14.811/2024 (Criminalização do bullying e cyberbullying)
 
-### Instalação e execução
-```bash
+Decreto nº 12.006/2024 (Programa Escola que Protege)
+
+Como Rodar o Projeto
+Pré-requisitos
+Node.js (v18 ou superior)
+
+Expo Go instalado no smartphone (Android)
+
+Instalação e execução
+Bash
 # Clone o repositório
-git clone [https://github.com/gediwan/escola-protege.git](https://github.com/gediwan/escola-protege.git)
+git clone https://github.com/gediwan/escola-protege.git
 cd escola-protege
 
 # Instale as dependências
