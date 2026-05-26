@@ -1,81 +1,138 @@
-Projeto de Atividade Extensionista (UNINTER) para o curso de Análise e Desenvolvimento de Sistemas.
+# Escola que Protege
 
-Título: Dando um debug na desigualdade de gênero em ambiente escolar
+Aplicativo mobile desenvolvido em React Native com Expo voltado à conscientização, prevenção e apoio em situações de violência no ambiente escolar.
 
-Aluno: Gedivan Santana de Jesus | RU: 4552028
+Projeto desenvolvido como parte da Atividade Extensionista do curso de Análise e Desenvolvimento de Sistemas — UNINTER.
 
-Sobre o Projeto
-Aplicativo mobile desenvolvido em React Native (Expo) para auxiliar no combate à violência de gênero no ambiente escolar. O foco do app é permitir que alunas relatem situações de violência de forma anônima, além de centralizar canais de denúncia e conteúdos informativos.
+**Aluno:** Gedivan Santana de Jesus
+**RU:** 4552028
+**Tema do Projeto:** Dando um debug na desigualdade de gênero em ambiente escolar
 
-Funcionalidades principais
-Denúncia Anônima: Formulário categorizado sem coleta de dados do usuário.
+---
 
-Central de Emergência: Acesso rápido para discagem direta (180, 100, 190, etc).
+## Sobre o projeto
 
-Conteúdo Educativo: Textos informativos sobre consentimento, cyberbullying e saúde mental.
+O aplicativo foi desenvolvido com a proposta de oferecer um canal acessível de orientação, apoio e encaminhamento para estudantes em situações de vulnerabilidade ou violência no contexto escolar.
 
-Protocolos de Ação: Guia passo a passo sobre como agir em situações de risco.
+A aplicação reúne informações educativas, canais oficiais de atendimento e protocolos básicos de atuação diante de diferentes situações relacionadas à violência, bullying, assédio e discriminação.
 
-Embasamento técnico e legal
-1º e 4º Boletim Técnico Escola que Protege (MEC/MDHC/FBSP)
+O projeto busca utilizar recursos tecnológicos como instrumento de apoio à conscientização e à promoção de um ambiente escolar mais seguro.
 
-Lei nº 14.811/2024 (Criminalização do bullying e cyberbullying)
+---
 
-Decreto nº 12.006/2024 (Programa Escola que Protege)
+## Funcionalidades
 
-Como Rodar o Projeto
-Pré-requisitos
-Node.js (v18 ou superior)
+* Registro de denúncias anônimas
+* Central de ajuda com contatos oficiais
+* Conteúdo educativo e informativo
+* Orientações de como agir em diferentes situações
+* Interface mobile acessível e intuitiva
 
-Expo Go instalado no smartphone (Android)
+---
 
-Instalação e execução
-Bash
-# Clone o repositório
-git clone https://github.com/gediwan/escola-protege.git
-cd escola-protege
+## Tecnologias utilizadas
 
-# Instale as dependências
-npm install
+* React Native
+* Expo SDK
+* React Navigation
+* JavaScript
+* Node.js
 
-# Inicie o Expo
-npx expo start
-Agora basta abrir o aplicativo Expo Go no celular e escanear o QR Code gerado no terminal.
+---
 
-Build para Android (APK)
-Para gerar o arquivo de instalação final, você pode optar pelo build local ou via EAS.
+## Estrutura do projeto
 
-Via EAS Build (Recomendado)
-Bash
-npm install -g eas-cli
-eas login
-eas build:configure
-eas build --platform android --profile preview
-Via Android Studio (Local)
-Bash
-npx expo run:android
-Estrutura de Arquivos
+```text
 escola-protege/
-├── App.js                    # Configuração de rotas e navegação
-├── app.json                  # Manifesto do Expo
-├── package.json              # Dependências do projeto
+├── App.js
+├── app.json
+├── package.json
+├── babel.config.js
 └── src/
-    ├── theme.js              # Variáveis de cores globais
-    └── screens/              # Telas do aplicativo
+    ├── theme.js
+    └── screens/
         ├── HomeScreen.js
         ├── DenunciaScreen.js
         ├── AjudaScreen.js
         ├── EducacaoScreen.js
         └── ComoAgirScreen.js
-Alinhamento com os ODS (ONU)
-O projeto atende diretamente aos seguintes Objetivos de Desenvolvimento Sustentável:
+```
 
-ODS 4: Educação de Qualidade
+---
 
-ODS 5: Igualdade de Gênero
+## Execução do projeto
 
-ODS 10: Redução das Desigualdades
+### Pré-requisitos
 
-ODS 16: Paz, Justiça e Instituições Eficazes
+* Node.js instalado
+* Expo Go instalado no dispositivo Android
 
-UNINTER • 2026
+---
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/gediwan/escola-protege.git
+cd escola-protege
+```
+
+---
+
+### Instalar dependências
+
+```bash
+npm install
+```
+
+---
+
+### Executar o projeto
+
+```bash
+npx expo start
+```
+
+Após iniciar o servidor, basta abrir o aplicativo Expo Go e escanear o QR Code exibido no terminal.
+
+---
+
+## Geração de APK
+
+Para geração da versão Android utilizando EAS Build:
+
+```bash
+eas build --platform android --profile preview
+```
+
+Após o processamento, será disponibilizado um link para download do APK.
+
+---
+
+## Referências utilizadas
+
+* Programa Escola que Protege — MEC
+* Lei nº 14.811/2024
+* Boletins Técnicos Escola que Protege
+* Materiais institucionais do Ministério da Educação
+* Conteúdos informativos sobre violência escolar e proteção de estudantes
+
+---
+
+## Objetivos relacionados aos ODS
+
+
+* ODS 5 — Igualdade de Gênero
+* ODS 10 — Redução das Desigualdades
+
+
+---
+
+## Repositório do projeto
+
+https://github.com/gediwan/escola-protege
+
+---
+
+## Finalidade
+
+Projeto desenvolvido exclusivamente para fins acadêmicos.
